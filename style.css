@@ -1,0 +1,445 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+  background: #1a1033;
+  color: white;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg, #172554, #312e81);
+}
+
+.header h1 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.header p {
+  color: #cbd5e1;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 25px 15px;
+}
+
+#search {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #172033;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.elements-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+
+.elements {
+  display: grid;
+  direction: ltr;
+  grid-template-columns: repeat(18, minmax(48px, 1fr));
+  grid-template-rows: repeat(9, 78px);
+  gap: 5px;
+  min-width: 1000px;
+}
+
+
+
+.element {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 5px 2px;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.element:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.element strong {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 4px 0;
+}
+
+.element small {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+
+.element {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 5px 2px;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.element:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.element strong {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 4px 0;
+}
+
+.element small {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+.element strong {
+  display: block;
+  font-size: 21px;
+  color: #60a5fa;
+  margin: 5px 0;
+}
+
+.element small {
+  font-size: 10px;
+  color: #cbd5e1;
+}
+
+/* پنل اطلاعات عنصر */
+
+.details {
+  background: linear-gradient(145deg, #1e293b, #111827);
+  border: 1px solid #475569;
+  border-radius: 18px;
+  padding: 28px;
+  line-height: 2;
+  min-height: 280px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12);
+}
+
+.details h2 {
+  color: #60a5fa;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #334155;
+}
+
+@media (max-width: 700px) {
+  .header h1 {
+    font-size: 21px;
+  }
+}
+
+/* رنگ خانواده‌های عناصر */
+
+/* رنگ خانواده‌های عناصر */
+
+.element.alkali {
+  background: #ff9f43;
+  color: #241300;
+}
+
+.element.alkaline {
+  background: #54c6eb;
+  color: #08232e;
+}
+
+.element.transition {
+  background: #a78bfa;
+  color: #21133d;
+}
+
+.element.post-transition {
+  background: #94a3b8;
+  color: #172033;
+}
+
+.element.metalloid {
+  background: #2dd4bf;
+  color: #06332e;
+}
+
+.element.nonmetal {
+  background: #a3e635;
+  color: #263600;
+}
+
+.element.halogen {
+  background: #fb7185;
+  color: #3b0b16;
+}
+
+.element.noble-gas {
+  background: #818cf8;
+  color: #151a4a;
+}
+
+.element.lanthanide {
+  background: #facc15;
+  color: #3b2e00;
+}
+
+.element.actinide {
+  background: #e879f9;
+  color: #3b1040;
+}
+/* افکت حرکت موس */
+
+.element {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.element:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* راهنمای رنگ خانواده‌های عناصر */
+/* نمایش مربع‌های رنگی راهنما */
+
+.legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legend-color.alkali { background: #ff9f43; }
+.legend-color.alkaline { background: #54c6eb; }
+.legend-color.transition { background: #a78bfa; }
+.legend-color.post-transition { background: #94a3b8; }
+.legend-color.metalloid { background: #2dd4bf; }
+.legend-color.nonmetal { background: #a3e635; }
+.legend-color.halogen { background: #fb7185; }
+.legend-color.noble-gas { background: #818cf8; }
+.legend-color.lanthanide { background: #facc15; }
+.legend-color.actinide { background: #e879f9; }
+/* چیدمان افقی راهنمای رنگ‌ها */
+
+.legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+/* بخش مدل اتمی بور */
+
+.bohr-section {
+  margin: 25px 0;
+  padding: 20px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.bohr-section h3 {
+  color: #38bdf8;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.bohr-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.bohr-model {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  overflow: visible;
+}
+
+.bohr-section p {
+  color: #e2e8f0;
+  font-size: 15px;
+  margin-top: 15px;
+  direction: rtl;
+}
+.bohr-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.bohr-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bohr-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.proton-dot {
+  background: #ef4444;
+}
+
+.neutron-dot {
+  background: #94a3b8;
+}
+
+.electron-dot {
+  background: #38bdf8;
+}
+.quantum-section {
+  margin-top: 25px;
+  padding: 20px;
+  background: #172033;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.quantum-model {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  padding: 25px;
+}
+
+.orbital {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.s-orbital {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #38bdf8, #1d4ed8);
+}
+
+.p-orbital {
+  width: 45px;
+  height: 85px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #a78bfa, #6d28d9);
+}
+
+.d-orbital {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #34d399, #047857);
+}
+
+.f-orbital {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fbbf24, #b45309);
+}
