@@ -443,3 +443,84 @@ body {
   border-radius: 50%;
   background: radial-gradient(circle, #fbbf24, #b45309);
 }
+/* Splash Screen */
+
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: linear-gradient(135deg, #1a1033, #31205c, #0b1120);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.splash-content {
+  animation: splashFade 1.2s ease;
+}
+
+.splash-icon {
+  font-size: 85px;
+  margin-bottom: 20px;
+  animation: atomPulse 2s infinite;
+}
+
+.splash-content h1 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.splash-content p {
+  color: #c4b5fd;
+  font-size: 15px;
+}
+
+.loading-bar {
+  width: 190px;
+  height: 5px;
+  background: #ffffff30;
+  border-radius: 20px;
+  margin: 35px auto 15px;
+  overflow: hidden;
+}
+
+.loading-bar span {
+  display: block;
+  width: 40%;
+  height: 100%;
+  background: #a78bfa;
+  border-radius: 20px;
+  animation: loadingMove 1.5s infinite;
+}
+
+.splash-content small {
+  color: #cbd5e1;
+}
+
+@keyframes splashFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes atomPulse {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes loadingMove {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}
