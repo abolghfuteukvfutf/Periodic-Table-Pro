@@ -1842,3 +1842,17 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const splash = document.getElementById("splash-screen");
+
+    if (splash) {
+      splash.style.transition = "opacity 0.8s ease";
+      splash.style.opacity = "0";
+
+      setTimeout(() => {
+        splash.remove();
+      }, 800);
+    }
+  }, 2500);
+});
